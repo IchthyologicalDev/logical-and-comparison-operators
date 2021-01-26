@@ -1,7 +1,7 @@
 /*
-Welcome to the arithmetic operators exercise! You'll get to practice writing functions
-that use some common arithmetic operators. If you get stuck, follow the tips on the 
-webpage.
+Welcome to the Logical and Comparison operators exercise! You'll get to practice 
+writing functions that use some common logical and comparison operators. If you
+get stuck, follow the tips on the webpage.
 
 Look through this file for requirements that start with REQUIREMENT N:
 Be sure to use the function name and order of parameters specified in the TODOs
@@ -33,115 +33,140 @@ Have fun casting strings to numbers when necessary!
 */
 
 /*
-REQUIREMENT 1: My calculator is broken. When I try to do 5 + 5, it returns 55.
+REQUIREMENT 1: I catch a fish when it's rainy or it's been more than a week since
+the last time I caught a fish. Will I catch a fish today?
 
-TODO: After this comment, create a function named 'add' that takes in two parameters
-that are either strings or numbers and returns the numeric sum
+TODO: After this comment, create a function named 'willCatchFish' that takes two
+parameters:
+boolean - true means it's rainy
+number - time in days since I last caught a fish
 
-EXAMPLE CALL
-add('5', '5') returns 10
-*/
-//YOUR FUNCTION GOES BELOW THIS LINE
-
-
-/*
-REQUIREMENT 2: In my fishing guide service, I have a unique way of calculating tips. 
-I round every guide's tips down to the nearest 10, and give the excess to the boat cleaner.
-
-TODO: After this comment, create a function named 'roundDownToTens' that takes in a
-positive integer and returns that integer rounded down to the nearest 10
-*/
-//YOUR FUNCTION GOES BELOW THIS LINE
-
-
-/*
-REQUIREMENT 3: I took out a couple interest only loans to launch this guide service. I
-think that I'm being overcharged. Help me out! If I just pay the interest amount,
-what should my monthly payments be? 
-
-TODO: After this comment, create a function named 'getMonthlyPayment' that takes
-in principal (number) and annual interest rate (decimal) and returns the monthly interest
-payment
+The function should return true if I will catch a fish. 
 
 EXAMPLE CALL
-getMonthlyPayment(1000, .06) returns 5, since there would be $60 of interest over the year
-Formula: principal times annual interest rate to find total interest for a year. Divide that by 12 
+willCatchFish(true, 3) returns true
 */
 //YOUR FUNCTION GOES BELOW THIS LINE
 
-
 /*
-REQUIREMENT 4: Marginal tax rates can be confusing. What percent am I actually paying?
+REQUIREMENT 2: Ocean fishing can be exciting. You don't always know what you'll
+catch. I think that I caught a record breaking cod, but I'm not sure if it's actually
+a cod, or if it even broke the previous record of 103 pounds Is this a record breaking cod?
 
-TODO: After this comment, create a function named 'getTaxRate' that takes in income
-(number) and tax paid (number) and returns the average tax rate as a percent
+TODO: After this comment, create a function named 'isRecordBreakingCod' that takes
+two parameters:
+string - fish species
+weight - fish weight in pounds
+
+The function should return true if it's a record breaking "cod".
 
 EXAMPLE CALL
-getTaxRate(50000, 7000) returns 14 since 7000/50000 is .14, which we multiply by 100 for the percentage
+isRecordBreakingCod('cod', 200) returns true
 */
 //YOUR FUNCTION GOES BELOW THIS LINE
 
-
 /*
-REQUIREMENT 5: I like helping out other small business owners. I am loaning between 
-$500 and $2000 to help someone launch their pizza company. We haven't worked out
-the interest rate yet, but they guaranteed that they will pay it back in full 1 
-year later. I need an IOU message from this person.
+REQUIREMENT 3: My boat is only safe when the wind is less or equal to 5 knots. Can my boat handle the wind? 
 
-TODO: After this comment, create a function named 'makeIOweYou' that takes in
-a loan amount (number) and interest rate (decimal), and returns a message that says
-"I owe you $<amount>", where <amount> represents the total due after a year.
+TODO: After this comment, create a function named 'isBoatSafe' that takes
+a single parameter:
+number - wind speed in knots
+
+The function should return true if my boat is safe for the wind
 
 EXAMPLE CALL
-makeIOweYou(750, .01) returns "I owe you $757.5"
-makeIOweYou(1200, .02) returns "I owe you $1224"
+isBoatSafe(1) returns true
 */
 //YOUR FUNCTION GOES BELOW THIS LINE
 
-
 /*
-REQUIREMENT 6: I have 1 bait bucket per client. I want an equal amount of bait in each
-bucket at the start of the day. How many pieces of bait will be left over after 
-placing an equal amount in each bucket?
+REQUIREMENT 4: Some fisherman can be really competitive. Present company excluded.
+Fisherman don't have fun if they haven't caught a fish, but someone else has. Did
+I have fun fishing with a friend?
 
-//TODO: After this comment, create a function named 'getLeftoverBait' that takes
-in the number of pieces of bait (integer) and the number of buckets (integer),
-and returns the number of pieces of bait that would remain (number)
+TODO: After this comment, create a function named 'wasFishingFun' that takes
+two parameters:
+boolean - whether the first fisherman caught a fish
+boolean - whether the second fisherman caught a fish
+
+The function should return true if everyone had fun
 
 EXAMPLE CALL
-getLeftoverBait(100, 9) returns 1, since the 9 buckets would have 11 pieces each, with 1 leftover
+wasFishingFun(true, true) returns true
 */
 //YOUR FUNCTION GOES BELOW THIS LINE
 
-
 /*
-REQUIREMENT 7: I get calls when the fishing heats up in certain areas. Can I make it to
-the new location within 30 minutes?
+REQUIREMENT 5: Sharks will occasionally bite a hook that has an equal size or
+smaller fish on it. Our boat can handle any size fish except for sharks. Sharks
+must be smaller than our boat. Will a shark bite, and is our boat big enough?
 
-TODO: After this comment, create a function named getDuration that takes in a velocity
-in miles per hour and distance in miles, and returns the number of minutes the trip will take
+TODO: After this comment, create a function named 'isBoatSufficient' that takes
+three parameters:
+number - length of fish on hook
+number - length of shark
+number - boat length
+
+The function should return true if our boat is big enough for whatever we land.
 
 EXAMPLE CALL
-getDuration(40, 20) returns 30, since it takes 30 minutes to go 20 miles at 40 mph
+isBoatSufficient(5, 10, 15) returns true
 */
 //YOUR FUNCTION GOES BELOW THIS LINE
 
-
 /*
-REQUIREMENT 8: Many fish populations are dwindling. Assuming that each fish can produce 5 fish 
-per year, how many fish would we have in the future if fish were immortal? 
+REQUIREMENT 6: I'm willing to move fishing locations if I haven't caught a fish
+in a while, and the new location is closer to shore. Should I move?
 
-TODO: After this comment, create a function named getPopulation that takes in a
-starting population (number) and number of years, and returns the future fish population (number)
+//TODO: After this comment, create a function named 'shouldMove' that takes
+threeParameters:
+boolean - true if I caught a fish recently
+number - current distance to shore
+number - new location's distance to shore
+
+The function should return true if I should move locations
 
 EXAMPLE CALL
-getPopulation(5,1) returns 30, since 5 fish each had 5 more fish.
-getPopulation(10,2) returns 360, since 10 fish each had 5, then each of those 60 had 5 more.
+shouldMove(false, 50, 30) returns true
+*/
+//YOUR FUNCTION GOES BELOW THIS LINE
+
+/*
+REQUIREMENT 7: I can justify fishing when it's a weekend or when my work backlog is empty. Can I justify fishing today?
+
+TODO: After this comment, create a function named canJustifyFishing that takes
+two parameters:
+boolean - true if it's a weekday
+string, number, undefined, or null - Empty backlog means empty string, 0, undefined, or null
+
+The function should return true if I can justify fishing
+
+EXAMPLE CALLS
+canJustifyFishing(true, null) returns true
+canJustifyFishing(true, 0) returns true
+canJustifyFishing(false, 'Grade Stuff') returns true
+canJustifyFishing(true, 'Grade Stuff') returns false
 */
 //YOUR FUNCTION GOES BELOW THIS LINE
 
 
 /*
-You've reached the end of this exercise! If you need more practice with arithmetic operations,
-go try them in your console! Many applications will involve some type of arithmetic.
+REQUIREMENT 8: I like catch and release fishing. Sometimes I wonder if I've ever caught the same fish twice. Is this the same fish? 
+
+TODO: After this comment, create a function named isSameFish that takes two
+parameters:
+string - first fish
+string - second fish
+
+The function should return true if the strings are the same
+
+EXAMPLE CALL
+isSameFish('Dorothy', 'Dorothy') returns true
+*/
+//YOUR FUNCTION GOES BELOW THIS LINE
+
+/*
+You've reached the end of this exercise! If you need more practice with logical and
+comparison operations, go try them in your console! Logical operators and equality
+checks are everywhere. 
 */

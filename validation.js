@@ -143,91 +143,98 @@ const runCases = (fn, testCases, successMessage) => {
     return resultObject(true, successMessage)
 }
 
-const testAdd = () => {
+const testWillCatchFish = () => {
     const testCases = [
-        makeCase(['5', '5'], 10),
-        makeCase(['-5', '5'], 0),
-        makeCase(['3.1', 3], 6.1),
-        makeCase([1.2, 2.1], 3.3),
-        makeCase([42, '0'], 42)
+        makeCase([true, 0], true),
+        makeCase([true, 7], true),
+        makeCase([true, 8], true),
+        makeCase([false, 8], true),
+        makeCase([false, 7], false)
     ]
-    return runCases(add, testCases, 'This all adds up to a successful function!');
+    return runCases(willCatchFish, testCases, 'If we know whether or not we\'ll catch fish, it kind of takes the fun out of fishing, no?');
 }
 
-const testRoundDownToTens = () => {
+const testIsRecordBreakingCod = () => {
     const testCases = [
-        makeCase([10], 10),
-        makeCase([22], 20),
-        makeCase([3], 0),
+        makeCase(['code', 104], false),
+        makeCase(['cod', 103], false),
+        makeCase(['cod', 104], true),
+        makeCase(['code', 103], false),
     ]
-    return runCases(roundDownToTens, testCases, 'Success! We just round them all down, and just drop the remainder.');
+    return runCases(isRecordBreakingCod, testCases, 'Was that a record breaking cod or a code breaking record?');
 }
 
-const testGetMonthlyPayment = () => {
+const testIsBoatSafe = () => {
     const testCases = [
-        makeCase([1000, .06], 5),
-        makeCase([1000, 0], 0),
-        makeCase([0, 1], 0),
-        makeCase([12, 1], 1),
+        makeCase([5], true),
+        makeCase([5.1], false),
+        makeCase([0], true)
     ]
-    return runCases(getMonthlyPayment, testCases, 'Success! Did this question pique your interest?');
+    return runCases(isBoatSafe, testCases, 'Now to hook up my anemometer to this function.');
 }
 
-const testGetTaxRate = () => {
+const testWasFishingFun = () => {
     const testCases = [
-        makeCase([1000, 100], 10),
-        makeCase([1000, 0], 0),
-        makeCase([6000, 1500], 25),
+        makeCase([true, true], true),
+        makeCase([false, false], true),
+        makeCase([true, false], false),
+        makeCase([false, true], false)
     ]
-    return runCases(getTaxRate, testCases, 'Success! The IRS wants to know if you\'re job hunting.');
+    return runCases(wasFishingFun, testCases, 'Misery loves company, as long as that company doesn\'t catch the only fish.');
 }
 
-const testMakeIOweYou = () => {
+const testIsBoatSufficient = () => {
     const testCases = [
-        makeCase([750, .01], 'I owe you $757.5'),
-        makeCase([1200, .02], 'I owe you $1224'),
-        makeCase([1500, 0], 'I owe you $1500'),
+        makeCase([10,10,1], false),
+        makeCase([5,10,10], false),
+        makeCase([5,10,11], true),
+        makeCase([11,10,1], true),
+        makeCase([10,10,10], false),
     ]
-    return runCases(makeIOweYou, testCases, 'I owe you a success message!');
+    return runCases(isBoatSufficient, testCases, 'I\'d still like to have a bigger boat.');
 }
 
-const testGetLeftoverBait = () => {
+const testShouldMove = () => {
     const testCases = [
-        makeCase([100, 9], 1),
-        makeCase([89, 7], 5),
-        makeCase([42, 1], 0),
+        makeCase([false, 1, 1], false),
+        makeCase([true, 1, 1], false),
+        makeCase([true, 1, 0], false),
+        makeCase([false, 1, 0], true),
     ]
-    return runCases(getLeftoverBait, testCases, 'Remainder of 0 failing test cases');
+    return runCases(shouldMove, testCases, 'Not catching fish over there is always better than continuing to not catch fish here.');
 }
 
-const testGetDuration = () => {
+const testCanJustifyFishing = () => {
     const testCases = [
-        makeCase([40, 20], 30),
-        makeCase([50, 75], 90),
-        makeCase([1, 10], 600),
+        makeCase([true, null], true),
+        makeCase([true, 0], true),
+        makeCase([true, ''], true),
+        makeCase([true], true),
+        makeCase([true, 'Grade Stuff'], false),
+        makeCase([false, 'Grade Stuff'], true),
+        makeCase([false, ''], true),
     ]
-    return runCases(getDuration, testCases, 'Success! Let\'s jet');
+    return runCases(canJustifyFishing, testCases, 'That was weird...The second argument always seems to be 0...I guess I should go fishing.');
 }
 
-const testGetPopulation = () => {
+const testIsSameFish = () => {
     const testCases = [
-        makeCase([5, 1], 30),
-        makeCase([10, 2], 360),
-        makeCase([7, 0], 7),
+        makeCase(['Dorothy', 'Dorothy'], true),
+        makeCase(['Bruce', 'Dorothy'], false),
     ]
-    return runCases(getPopulation, testCases, '"So many friends, SO MANY FISH!" - Lucy Cousins');
+    return runCases(isSameFish, testCases, 'Fish have a lot better memory than you might believe, but they\'re always hungry.');
 }
 
 //NOTE: The order of questions in this array must match the order of requirements on the DOM and in the index.js file.
 const questions = [
-    question(testAdd),
-    question(testRoundDownToTens),
-    question(testGetMonthlyPayment),
-    question(testGetTaxRate),
-    question(testMakeIOweYou),
-    question(testGetLeftoverBait),
-    question(testGetDuration),
-    question(testGetPopulation)
+    question(testWillCatchFish),
+    question(testIsRecordBreakingCod),
+    question(testIsBoatSafe),
+    question(testWasFishingFun),
+    question(testIsBoatSufficient),
+    question(testShouldMove),
+    question(testCanJustifyFishing),
+    question(testIsSameFish)
 ]
 
 runValidation(questions);
