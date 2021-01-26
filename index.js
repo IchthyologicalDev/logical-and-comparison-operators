@@ -7,19 +7,25 @@ Look through this file for requirements that start with REQUIREMENT N:
 Be sure to use the function name and order of parameters specified in the TODOs
 
 As an example,
-REQUIREMENT 1: My calculator is broken. When I try to do 5 + 5, it returns 55.
+REQUIREMENT 1: I catch a fish when it's rainy or it's been more than a week since
+the last time I caught a fish. Will I catch a fish today?
 
-TODO: On the following lines, create a function named 'add' that takes in two parameters
-that are either strings or numbers and returns the numeric sum
+TODO: After this comment, create a function named 'willCatchFish' that takes two
+parameters:
+boolean - true means it's rainy
+number - time in days since I last caught a fish
+
+The function should return true if I will catch a fish. 
 
 EXAMPLE CALL
-add('5', '5') returns 10
+willCatchFish(true, 3) returns true
+
 //YOUR FUNCTION GOES BELOW THIS LINE
-function add(x,y) {
+function willCatchFish(isRainy, daysSinceFish) {
     //your logic would go here
 }
 
-This function would not pass, since it clearly doesn't return the numeric sum
+This function would not pass, since it clearly doesn't tell me if I will catch fish
 
 You will occasionally see longer comments (like this one) that will include extra
 instruction, helpful hints, best practices, or other content. 
