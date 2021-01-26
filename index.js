@@ -35,7 +35,7 @@ You should have the index.html file open in your browser as you work through thi
 exercise. If you aren't sure what this means, you should watch the How to Edit Code 
 video: https://youtu.be/vkWDQzl_x3s before continuing.
 
-Have fun casting strings to numbers when necessary!
+Have fun netting some logical and comparison knowledge!
 */
 
 /*
