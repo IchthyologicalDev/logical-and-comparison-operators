@@ -87,7 +87,7 @@ isBoatSafe(1) returns true
 
 /*
 REQUIREMENT 4: Some fisherman can be really competitive. Present company excluded.
-Fisherman don't have fun if they haven't caught a fish, but someone else has. Did
+Fisherman have fun if they have caught a fish, or if no one has caught a fish. Did
 I have fun fishing with a friend?
 
 TODO: After this comment, create a function named 'wasFishingFun' that takes
