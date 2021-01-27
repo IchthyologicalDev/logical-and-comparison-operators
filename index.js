@@ -47,7 +47,7 @@ parameters:
 boolean - true means it's rainy
 number - time in days since I last caught a fish
 
-The function should return true if I will catch a fish. 
+The function should return true if I will catch a fish, or false otherwise. 
 
 EXAMPLE CALL
 willCatchFish(true, 3) returns true
@@ -64,7 +64,7 @@ two parameters:
 string - fish species
 weight - fish weight in pounds
 
-The function should return true if it's a record breaking "cod".
+The function should return true if it's a record breaking "cod", or false otherwise.
 
 EXAMPLE CALL
 isRecordBreakingCod('cod', 200) returns true
@@ -78,7 +78,7 @@ TODO: After this comment, create a function named 'isBoatSafe' that takes
 a single parameter:
 number - wind speed in knots
 
-The function should return true if my boat is safe for the wind
+The function should return true if my boat is safe for the wind, or false otherwise
 
 EXAMPLE CALL
 isBoatSafe(1) returns true
@@ -95,7 +95,7 @@ two parameters:
 boolean - whether the first fisherman caught a fish
 boolean - whether the second fisherman caught a fish
 
-The function should return true if everyone had fun
+The function should return true if everyone had fun, or false otherwise
 
 EXAMPLE CALL
 wasFishingFun(true, true) returns true
@@ -113,7 +113,7 @@ number - length of fish on hook
 number - length of shark
 number - boat length
 
-The function should return true if our boat is big enough for whatever we land.
+The function should return true if our boat is big enough for whatever we land, or false otherwise.
 
 EXAMPLE CALL
 isBoatSufficient(5, 10, 15) returns true
@@ -130,7 +130,7 @@ boolean - true if I caught a fish recently
 number - current distance to shore
 number - new location's distance to shore
 
-The function should return true if I should move locations
+The function should return true if I should move locations, or false otherwise
 
 EXAMPLE CALL
 shouldMove(false, 50, 30) returns true
@@ -145,7 +145,7 @@ two parameters:
 boolean - true if it's a weekday
 string, number, undefined, or null - Empty backlog means empty string, 0, undefined, or null
 
-The function should return true if I can justify fishing
+The function should return true if I can justify fishing, or false otherwise
 
 EXAMPLE CALLS
 canJustifyFishing(true, null) returns true
@@ -164,7 +164,7 @@ parameters:
 string - first fish
 string - second fish
 
-The function should return true if the strings are the same
+The function should return true if the strings are the same, or false otherwise
 
 EXAMPLE CALL
 isSameFish('Dorothy', 'Dorothy') returns true
