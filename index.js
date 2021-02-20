@@ -53,6 +53,9 @@ EXAMPLE CALL
 willCatchFish(true, 3) returns true
 */
 //YOUR FUNCTION GOES BELOW THIS LINE
+function willCatchFish(isRainy, daysSinceFish) {
+    return isRainy || daysSinceFish > 7;
+}
 
 /*
 REQUIREMENT 2: Ocean fishing can be exciting. You don't always know what you'll
@@ -70,6 +73,9 @@ EXAMPLE CALL
 isRecordBreakingCod('cod', 200) returns true
 */
 //YOUR FUNCTION GOES BELOW THIS LINE
+function isRecordBreakingCod(species, weight) {
+    return species == 'cod' && weight > 103;
+}
 
 /*
 REQUIREMENT 3: My boat is only safe when the wind is less or equal to 5 knots. Can my boat handle the wind? 
@@ -84,6 +90,9 @@ EXAMPLE CALL
 isBoatSafe(1) returns true
 */
 //YOUR FUNCTION GOES BELOW THIS LINE
+function isBoatSafe(windSpeed) {
+    return windSpeed <= 5;
+}
 
 /*
 REQUIREMENT 4: Some fisherman can be really competitive. Present company excluded.
@@ -101,6 +110,9 @@ EXAMPLE CALL
 wasFishingFun(true, true) returns true
 */
 //YOUR FUNCTION GOES BELOW THIS LINE
+function wasFishingFun(firstCaught, secondCaught) {
+    return firstCaught == secondCaught;
+}
 
 /*
 REQUIREMENT 5: Sharks will occasionally bite a hook that has an equal size or
@@ -119,6 +131,9 @@ EXAMPLE CALL
 isBoatSufficient(5, 10, 15) returns true
 */
 //YOUR FUNCTION GOES BELOW THIS LINE
+function isBoatSufficient(fishLength, sharkLength, boatLength) {
+    return fishLength > sharkLength || boatLength > sharkLength
+}
 
 /*
 REQUIREMENT 6: I'm willing to move fishing locations if I haven't caught a fish
@@ -136,6 +151,9 @@ EXAMPLE CALL
 shouldMove(false, 50, 30) returns true
 */
 //YOUR FUNCTION GOES BELOW THIS LINE
+function shouldMove(recentCatch, currentDistance, proposedDistance) {
+    return !recentCatch && currentDistance > proposedDistance
+}
 
 /*
 REQUIREMENT 7: I can justify fishing when it's a weekend or when my work backlog is empty. Can I justify fishing today?
@@ -154,7 +172,9 @@ canJustifyFishing(false, 'Grade Stuff') returns true
 canJustifyFishing(true, 'Grade Stuff') returns false
 */
 //YOUR FUNCTION GOES BELOW THIS LINE
-
+function canJustifyFishing(isWeekday, backlog) {
+    return !isWeekday || !backlog
+}
 
 /*
 REQUIREMENT 8: I like catch and release fishing. Sometimes I wonder if I've ever caught the same fish twice. Is this the same fish? 
@@ -170,6 +190,9 @@ EXAMPLE CALL
 isSameFish('Dorothy', 'Dorothy') returns true
 */
 //YOUR FUNCTION GOES BELOW THIS LINE
+function isSameFish(first, second) {
+    return first == second;
+}
 
 /*
 You've reached the end of this exercise! If you need more practice with logical and
