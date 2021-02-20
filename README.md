@@ -1,11 +1,9 @@
-# JS TEMPLATE Practice Exercise
-Test out your knowledge of primitive data types in JavaScript! 
+# JS Logical and Comparison Operators Practice Exercise
+Test out your knowledge of logical and comparison operators in JavaScript! 
 
 ## Prerequisite Knowledge
-- EDIT THIS AS APPROPRIATE
-- Opening an HTML file in your browser
-- Editing text in a text editor
 - JavaScript's Primitive Data Types
+- Logical and Comparison Operators in JS
 
 ## Usage
 1. Clone (or download) project
@@ -14,7 +12,6 @@ Test out your knowledge of primitive data types in JavaScript!
 1. Follow the instructions on that page to get started
 
 ## Stuck?
-- You can find a video walkthrough of this exercise here: 
 - You can also find a solution by checking out the `solution` branch
 
 ## Contributors
